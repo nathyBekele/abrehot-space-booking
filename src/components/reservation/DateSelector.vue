@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <!-- Calendar section -->
     <div>
-      <div class="flex items-center justify-between mb-4 mx-2 md:mx-4">
+      <div class="flex items-center justify-between mb-2 md:mb-4 mx-2 md:mx-4">
         <button 
           @click="previousMonth" 
           class="p-2 hover:bg-gray-100 rounded-full transition-colors"
@@ -39,7 +39,7 @@
               @click="selectDate(date)"
               :disabled="!isCurrentMonth || !isAvailable || isPastDate(date)"
               :class="[
-                'w-5 h-5 p-4 md:w-8 md:h-8 flex items-center justify-center text-sm transition-all duration-200 rounded-full',
+                'w-5 h-5 p-4 md:w-8 md:h-8 flex items-center justify-center text-sm transition-all duration-200 rounded-full relative',
                 // Base styles
                 isCurrentMonth ? '' : 'opacity-0',
                 // Selected state with ring
@@ -53,16 +53,16 @@
               ]"
             >
               {{ new Date(date).getDate() }}
-            </button>
 
-            <!-- Tooltip for available slots -->
-            <div
-              v-if="isAvailable && isCurrentMonth"
-              class="absolute bottom-full left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded hidden group-hover:block whitespace-nowrap z-10"
-            >
-              {{ availableSlots }} slots available
-              <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>
-            </div>
+              <!-- Tooltip for available slots -->
+              <div
+                v-if="isAvailable && isCurrentMonth"
+                class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-gray-900 text-white text-xs rounded hidden group-hover:block whitespace-nowrap z-10"
+              >
+                {{ availableSlots }} slots available
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>
+              </div>
+            </button>
           </div>
         </template>
       </div>

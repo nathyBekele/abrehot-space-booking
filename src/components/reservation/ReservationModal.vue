@@ -30,7 +30,7 @@
           <div v-if="!showSuccess" class="h-px bg-gray-100 mt-2"></div>
 
           <!-- Step navigation -->
-          <div v-if="!showSuccess" class="flex justify-between mt-5 mx-2 space-x-4">
+          <div v-if="!showSuccess" class="flex justify-between mt-2 md:mt-5 mx-auto md:mx-2 md:space-x-4">
             <div 
               v-for="(step, index) in steps" 
               :key="index"
@@ -63,7 +63,7 @@
               :selected-date="selectedDate"
               :available-dates="availableDates"
               @date-selected="handleDateSelected"
-              class="md:mx-8 mt-5"
+              class="md:mx-8 md:mt-5"
             />
 
             <!-- Time Slots Step -->
