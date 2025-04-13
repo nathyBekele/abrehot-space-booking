@@ -43,7 +43,7 @@
             </div>
 
             <a href="#" 
-              @click.prevent="openReservationModal('Reference and Leisure Reading Areas')" 
+              @click.prevent="openReservationModal('Leisure Reading Areas')" 
               class="mt-4 sm:mt-6 pl-5 text-yellow-500 font-semibold hover:text-yellow-600 transition-colors group flex items-center"
             >
               Reserve A Room

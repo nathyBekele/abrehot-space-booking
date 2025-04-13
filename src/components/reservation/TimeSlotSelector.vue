@@ -8,7 +8,7 @@
         >
           <div
             :class="[
-              'p-4 rounded-lg border text-left transition-all duration-200',
+              'p-2 md:p-4 rounded-lg border text-left transition-all duration-200',
               'flex items-center justify-between',
               isSelected(slot) 
                 ? 'bg-yellow-500 text-white border-yellow-600 transform scale-[1.02]'

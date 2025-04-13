@@ -38,7 +38,7 @@
             >
               <div 
                 :class="[
-                  'text-center text-sm rounded-lg',
+                  'text-center text-sm md:rounded-lg',
                   currentStep > index ? 'text-yellow-500 font-semibold' : 'text-gray-400'
                 ]"
               >
@@ -46,7 +46,7 @@
               </div>
               <div 
                 :class="[
-                  'h-1 mt-2 transition-all duration-200 rounded-lg',
+                  'h-1 mt-2 transition-all duration-200 md:rounded-lg',
                   currentStep >= index ? 'bg-yellow-500' : 'bg-gray-200'
                 ]"
               ></div>
@@ -56,7 +56,7 @@
 
         <!-- Content area -->
         <div v-if="!showSuccess" class="flex-1">
-          <div class="mx-auto mt-2">
+          <div class="mx-auto md:mt-2">
             <!-- Calendar Step -->
             <DateSelector
               v-if="currentStep === 0"
@@ -67,7 +67,7 @@
             />
 
             <!-- Time Slots Step -->
-            <div v-if="currentStep === 1" class="overflow-y-auto h-[calc(50vh-120px)] md:h-[calc(90vh-200px)]">
+            <div v-if="currentStep === 1" class="overflow-y-auto h-[calc(50vh-90px)] md:h-[calc(90vh-200px)]">
               <TimeSlotSelector
                 :selected-time="selectedTime"
                 :available-slots="availableTimeSlots"
